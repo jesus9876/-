@@ -26,10 +26,23 @@
         }
 
         .image-container img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
+            width: 80%;  /* 图片占据80%宽度 */
+            height: auto;  /* 保持图片的比例 */
+            max-width: 100%;  /* 最大宽度为100%，避免超出页面 */
             cursor: pointer;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;  /* 使图片在宽度有限的情况下自动换行 */
+            gap: 10px; /* 设置图片之间的间距 */
+        }
+
+        .image-row img {
+            width: 45%;  /* 每个图片宽度为45%，这样两张图片能在一行内排列 */
+            margin: 10px;
         }
 
         .text {
@@ -52,7 +65,9 @@
 
         /* 页面2和3 */
         #page2, #page3, #page4 {
-            background-color: #ADD8E6; /* 淡蓝色背景 */
+            background-image: url('1.jpg'); /* 背景为1.jpg */
+            background-size: cover;
+            background-position: center;
         }
 
         /* 黑色粗体文字 */
@@ -63,16 +78,6 @@
             margin-top: 20px;
         }
 
-        .image-row {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .image-row img {
-            width: 50%;
-            margin: 5px;
-        }
 
         .footer-text {
             cursor: pointer;

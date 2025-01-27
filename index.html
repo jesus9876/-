@@ -44,14 +44,14 @@
         }
 
         /* 页面1 */
-        # page1 {
-            background - image: url('2.jpg'); / *背景为2.jpg * /
-            background - size: cover;
-            ackground - position: center;
+        #page1 {
+            background-image: url('2.jpg'); /* 背景为2.jpg */
+            background-size: cover;
+            background-position: center;
         }
 
         /* 页面2和3 */
-        #page2, #page3 {
+        #page2, #page3, #page4 {
             background-color: #ADD8E6; /* 淡蓝色背景 */
         }
 
@@ -90,13 +90,13 @@
 <body>
 
     <!-- 第一页 -->
-    < div id = "page1" class ="page active" >
-        < div class ="bold-text" > 动漫《强风吹拂》b站评论分析 < / div >
-        < div class ="footer-text" onclick="playBGM()" > 点击播放bgm < / div >
-        < div class ="footer-text" onclick="nextPage(2)" > 点击翻页 < / div >
-    < / div >
+    <div id="page1" class="page active">
+        <div class="bold-text">动漫《强风吹拂》b站评论分析</div>
+        <div class="footer-text" onclick="playBGM()">点击播放bgm</div>
+        <div class="footer-text" onclick="nextPage(2)">点击翻页</div>
+    </div>
 
-        <!-- 第二页 -->
+    <!-- 第二页 -->
     <div id="page2" class="page">
         <div class="bold-text">可视化展示</div>
         <div class="image-row">
@@ -130,7 +130,7 @@
         <div class="footer-text" onclick="nextPage(4)">点击翻页</div>
     </div>
         
- <!-- 第四页 -->
+    <!-- 第四页 -->
     <div id="page4" class="page">
         <div class="bold-text">现实中的箱根驿传</div>
         <div class="image-row">
@@ -168,6 +168,7 @@
 
 </body>
 </html>
+
 
 
 

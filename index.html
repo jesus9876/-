@@ -45,9 +45,7 @@
 
         /* 页面1 */
         #page1 {
-            background-image: url('1.jpg');
-            background-size: cover;
-            background-position: center;
+            background-color: #ADD8E6; /* 淡蓝色背景 */
         }
 
         /* 页面2和3 */
@@ -59,6 +57,7 @@
         .bold-text {
             color: black;
             font-weight: bold;
+            font-size: 36px; /* 增大文字 */
             margin-top: 20px;
         }
 
@@ -79,6 +78,11 @@
             color: black;
             margin-top: 20px;
         }
+
+        .large-text {
+            font-size: 20px; /* 增大文字 */
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +91,7 @@
     <div id="page1" class="page active">
         <div class="image-container">
             <img src="jpg.2" alt="图2" onclick="playBGM()">
-            <div class="text">图2</div>
+            <div class="text large-text">点击此图播放bgm</div>
         </div>
         <div class="image-container">
             <img src="jpg.3" alt="图3">
@@ -118,6 +122,10 @@
         <div class="image-container">
             <img src="jpg.8" alt="图8">
             <div class="text">图8</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.9" alt="图9">
+            <div class="text">图9</div>
         </div>
         <div class="footer-text" onclick="nextPage(3)">按动此处翻页</div>
     </div>
@@ -156,4 +164,5 @@
 
 </body>
 </html>
+
 

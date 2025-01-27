@@ -15,6 +15,10 @@
             height: 100vh;
             overflow: hidden;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
         .active {
@@ -39,17 +43,19 @@
 
         .footer-text {
             margin-top: 20px;
-            color: white;
+            color: black; /* 所有文字都设置为黑色 */
             cursor: pointer;
         }
 
         /* 页面1 */
         #page1 {
-            background-color: #ADD8E6; /* 淡蓝色背景 */
+            background-image: url('2.jpg'); /* 背景为2.jpg */
+            background-size: cover;
+            background-position: center;
         }
 
         /* 页面2和3 */
-        #page2, #page3 {
+        #page2, #page3, #page4 {
             background-color: #ADD8E6; /* 淡蓝色背景 */
         }
 
@@ -61,7 +67,7 @@
             margin-top: 20px;
         }
 
-         .image-row {
+        .image-row {
             display: flex;
             justify-content: space-between; /* 每行图片平均分布 */
             width: 100%;
@@ -69,24 +75,10 @@
         }
 
         .image-row img {
-            width: 45%;
-            margin: 10px;
-        }
-        #page3 .image-row {
-            display: flex;
-            justify-content: flex-start;
-            width: 100%;
+            width: 30%; /* 每张图片占页面宽度的30% */
+            margin: 5px;
         }
 
-        #page3 .image-left {
-            width: 48%; /* 左边图片占48% */
-            margin-right: 2%;
-        }
-
-        #page3 .image-right {
-            width: 48%; /* 右边图片占48% */
-            margin-left: 2%;
-        }
         .footer-text {
             cursor: pointer;
             font-size: 18px;
@@ -95,7 +87,7 @@
         }
 
         .large-text {
-            font-size: 20px; /* 增大文字 */
+            font-size: 24px; /* 增大文字 */
             font-weight: bold;
         }
     </style>
@@ -104,52 +96,56 @@
 
     <!-- 第一页 -->
     <div id="page1" class="page active">
-        <div class="image-container">
-            <img src="2.jpg" alt="图2" onclick="playBGM()">
-            <div class="text large-text">点击此图播放bgm</div>
-        </div>
-        <div class="image-container">
-            <img src="3.jpg" alt="图3">
-            <div class="text">图3</div>
-        </div>
-        <div class="image-container">
-            <img src="4.jpg" alt="图4">
-            <div class="text">图4</div>
-        </div>
-        <div class="image-container">
-            <img src="5.jpg" alt="图5">
-            <div class="text">图5</div>
-        </div>
-        <div class="footer-text" onclick="nextPage(2)">按动此处翻页</div>
+        <div class="bold-text">动漫《强风吹拂》b站评论分析</div>
+        <div class="footer-text" onclick="playBGM()">点击播放bgm</div>
+        <div class="footer-text" onclick="nextPage(2)">点击翻页</div>
     </div>
 
     <!-- 第二页 -->
     <div id="page2" class="page">
-        <div class="bold-text">箱根山岳险天下!</div>
-        <div class="image-container">
-            <img src="6.jpg" alt="图6">
-            <div class="text">图6</div>
+        <div class="bold-text">可视化展示</div>
+        <div class="image-row">
+            <div class="image-container">
+                <img src="3.jpg" alt="图3">
+            </div>
+            <div class="image-container">
+                <img src="4.jpg" alt="图4">
+            </div>
+            <div class="image-container">
+                <img src="5.jpg" alt="图5">
+            </div>
         </div>
-        <div class="image-container">
-            <img src="7.jpg" alt="图7">
-            <div class="text">图7</div>
-        </div>
-        <div class="image-container">
-            <img src="8.jpg" alt="图8">
-            <div class="text">图8</div>
-        </div>
-        <div class="footer-text" onclick="nextPage(3)">按动此处翻页</div>
+        <div class="footer-text" onclick="nextPage(3)">点击翻页</div>
     </div>
 
     <!-- 第三页 -->
-     <div id="page3" class="page">
+    <div id="page3" class="page">
+        <div class="bold-text">箱根山岳险天下！</div>
+        <div class="image-row">
+            <div class="image-container">
+                <img src="6.jpg" alt="图6">
+            </div>
+            <div class="image-container">
+                <img src="7.jpg" alt="图7">
+            </div>
+            <div class="image-container">
+                <img src="8.jpg" alt="图8">
+            </div>
+        </div>
+        <div class="footer-text" onclick="nextPage(4)">点击翻页</div>
+    </div>
+
+    <!-- 第四页 -->
+    <div id="page4" class="page">
         <div class="bold-text">现实中的箱根驿传</div>
         <div class="image-row">
-            <div class="image-container image-left">
+            <div class="image-container">
                 <img src="10.jpg" alt="图10">
             </div>
-            <div class="image-container image-right">
+            <div class="image-container">
                 <img src="11.jpg" alt="图11">
+            </div>
+            <div class="image-container">
                 <img src="12.jpg" alt="图12">
             </div>
         </div>
@@ -177,5 +173,6 @@
 
 </body>
 </html>
+
 
 

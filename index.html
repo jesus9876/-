@@ -6,75 +6,136 @@
     <title>网页展示</title>
     <style>
         body {
-            background-image: url('1.jpg');
-            background-size: cover;
+            margin: 0;
             font-family: Arial, sans-serif;
-            text-align: center;
-            color: white;
         }
-        .image-container {
-            margin: 20px 0;
-        }
-        .image-container img {
-            width: 300px;
-            height: auto;
-            cursor: pointer;
-        }
-        .text {
-            margin-top: 10px;
-        }
+
         .page {
             display: none;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
         }
+
         .active {
             display: block;
         }
+
+        .image-container {
+            margin: 10px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .text {
+            color: white;
+            margin-top: 10px;
+        }
+
         .footer-text {
+            margin-top: 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* 页面1 */
+        #page1 {
+            background-image: url('1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 页面2和3 */
+        #page2, #page3 {
+            background-color: #ADD8E6; /* 淡蓝色背景 */
+        }
+
+        /* 黑色粗体文字 */
+        .bold-text {
+            color: black;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .image-row img {
+            width: 45%;
+            margin: 10px;
+        }
+
+        .footer-text {
+            cursor: pointer;
+            font-size: 18px;
+            color: black;
             margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <!-- 第一页内容 -->
+    <!-- 第一页 -->
     <div id="page1" class="page active">
         <div class="image-container">
-            <img src="2.jpg" alt="图2" onclick="playBGM()">
+            <img src="jpg.2" alt="图2" onclick="playBGM()">
             <div class="text">图2</div>
         </div>
         <div class="image-container">
-            <img src="3.jpg" alt="图3">
-            <div class="text">词云图</div>
+            <img src="jpg.3" alt="图3">
+            <div class="text">图3</div>
         </div>
         <div class="image-container">
-            <img src="4.jpg" alt="图4">
-            <div class="text">情感分布直方图</div>
+            <img src="jpg.4" alt="图4">
+            <div class="text">图4</div>
         </div>
         <div class="image-container">
-            <img src="5.jpg" alt="图5">
-            <div class="text">情感分布饼图</div>
+            <img src="jpg.5" alt="图5">
+            <div class="text">图5</div>
         </div>
-        <div class="image-container">
-            <img src="6.jpg" alt="图6" onclick="nextPage()">
-            <div class="text">点击此图进行翻页</div>
-        </div>
+        <div class="footer-text" onclick="nextPage(2)">按动此处翻页</div>
     </div>
 
-    <!-- 第二页内容 -->
+    <!-- 第二页 -->
     <div id="page2" class="page">
+        <div class="bold-text">箱根山岳险天下!</div>
         <div class="image-container">
-            <img src="7.jpg" alt="图7">
+            <img src="jpg.6" alt="图6">
+            <div class="text">图6</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.7" alt="图7">
             <div class="text">图7</div>
         </div>
         <div class="image-container">
-            <img src="8.jpg" alt="图8">
+            <img src="jpg.8" alt="图8">
             <div class="text">图8</div>
         </div>
         <div class="image-container">
-            <img src="9.jpg" alt="图9">
+            <img src="jpg.9" alt="图9">
             <div class="text">图9</div>
         </div>
-        <div class="footer-text">箱根山岳险天下</div>
+        <div class="footer-text" onclick="nextPage(3)">按动此处翻页</div>
+    </div>
+
+    <!-- 第三页 -->
+    <div id="page3" class="page">
+        <div class="bold-text">现实中的箱根驿传</div>
+        <div class="image-row">
+            <img src="jpg.10" alt="图10">
+        </div>
+        <div class="image-row">
+            <img src="jpg.11" alt="图11">
+            <img src="jpg.12" alt="图12">
+        </div>
     </div>
 
     <!-- BGM -->
@@ -86,12 +147,17 @@
             bgm.play();  // 播放背景音乐
         }
 
-        function nextPage() {
-            // 隐藏第一页，显示第二页
-            document.getElementById('page1').classList.remove('active');
-            document.getElementById('page2').classList.add('active');
+        function nextPage(pageNumber) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // 显示指定的页面
+            document.getElementById('page' + pageNumber).classList.add('active');
         }
     </script>
 
 </body>
 </html>
+

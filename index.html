@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页展示</title>
+    <style>
+        body {
+            background-image: url('jpg.1');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+        }
+        .text {
+            margin-top: 10px;
+        }
+        .page {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .footer-text {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 第一页内容 -->
+    <div id="page1" class="page active">
+        <div class="image-container">
+            <img src="jpg.2" alt="图2" onclick="playBGM()">
+            <div class="text">图2</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.3" alt="图3">
+            <div class="text">词云图</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.4" alt="图4">
+            <div class="text">情感分布直方图</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.5" alt="图5">
+            <div class="text">情感分布饼图</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.6" alt="图6" onclick="nextPage()">
+            <div class="text">点击此图进行翻页</div>
+        </div>
+    </div>
+
+    <!-- 第二页内容 -->
+    <div id="page2" class="page">
+        <div class="image-container">
+            <img src="jpg.7" alt="图7">
+            <div class="text">图7</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.8" alt="图8">
+            <div class="text">图8</div>
+        </div>
+        <div class="image-container">
+            <img src="jpg.9" alt="图9">
+            <div class="text">图9</div>
+        </div>
+        <div class="footer-text">箱根山岳险天下</div>
+    </div>
+
+    <!-- BGM -->
+    <audio id="bgm" src="bgm.mp3" preload="auto"></audio>
+
+    <script>
+        function playBGM() {
+            var bgm = document.getElementById('bgm');
+            bgm.play();  // 播放背景音乐
+        }
+
+        function nextPage() {
+            // 隐藏第一页，显示第二页
+            document.getElementById('page1').classList.remove('active');
+            document.getElementById('page2').classList.add('active');
+        }
+    </script>
+
+</body>
+</html>

@@ -26,23 +26,23 @@
         }
 
         .image-container img {
-            width: 80%;  /* 图片占据80%宽度 */
-            height: auto;  /* 保持图片的比例 */
-            max-width: 100%;  /* 最大宽度为100%，避免超出页面 */
+            width: 100%;
+            max-width: 300px;
+            height: auto;
             cursor: pointer;
         }
 
-        .image-row {
+       .image-row {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;  /* 使图片尽量占满整个画面 */
             margin-top: 20px;
-            flex-wrap: wrap;  /* 使图片在宽度有限的情况下自动换行 */
-            gap: 10px; /* 设置图片之间的间距 */
+            flex-wrap: nowrap;  /* 防止换行 */
         }
 
         .image-row img {
-            width: 45%;  /* 每个图片宽度为45%，这样两张图片能在一行内排列 */
-            margin: 10px;
+            width: 33%;  /* 每张图片宽度为33%，三张图片横向排列 */
+            height: auto;  /* 保持图片比例 */
+            margin: 10px;  /* 可选：图片之间的间距 */
         }
 
         .text {

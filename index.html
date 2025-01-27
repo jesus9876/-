@@ -15,10 +15,6 @@
             height: 100vh;
             overflow: hidden;
             text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
         }
 
         .active {
@@ -31,7 +27,7 @@
 
         .image-container img {
             width: 100%;
-            max-width: 100%;
+            max-width: 300px;
             height: auto;
             cursor: pointer;
         }
@@ -43,7 +39,7 @@
 
         .footer-text {
             margin-top: 20px;
-            color: black; /* 所有文字都设置为黑色 */
+            color: white;
             cursor: pointer;
         }
 
@@ -67,31 +63,13 @@
 
         .image-row {
             display: flex;
-            justify-content: space-between; /* 每行图片平均分布 */
-            width: 100%;
+            justify-content: center;
             margin-top: 20px;
         }
 
         .image-row img {
-            width: 48%; /* 每张图片占页面宽度的48% */
-            margin: 1%;
-        }
-
-        /* 第三页的图片排列 */
-        #page3 .image-row {
-            display: flex;
-            justify-content: flex-start;
-            width: 100%;
-        }
-
-        #page3 .image-left {
-            width: 48%; /* 左边图片占48% */
-            margin-right: 2%;
-        }
-
-        #page3 .image-right {
-            width: 48%; /* 右边图片占48% */
-            margin-left: 2%;
+            width: 45%;
+            margin: 10px;
         }
 
         .footer-text {
@@ -113,23 +91,19 @@
     <div id="page1" class="page active">
         <div class="image-container">
             <img src="2.jpg" alt="图2" onclick="playBGM()">
-            <div class="text">点击此图播放bgm</div> <!-- 取消加粗 -->
+            <div class="text large-text">点击此图播放bgm</div>
         </div>
-        <div class="image-row">
-            <div class="image-container">
-                <img src="3.jpg" alt="图3">
-                <div class="text">图3</div>
-            </div>
-            <div class="image-container">
-                <img src="4.jpg" alt="图4">
-                <div class="text">图4</div>
-            </div>
+        <div class="image-container">
+            <img src="3.jpg" alt="图3">
+            <div class="text">图3</div>
         </div>
-        <div class="image-row">
-            <div class="image-container">
-                <img src="5.jpg" alt="图5">
-                <div class="text">图5</div>
-            </div>
+        <div class="image-container">
+            <img src="4.jpg" alt="图4">
+            <div class="text">图4</div>
+        </div>
+        <div class="image-container">
+            <img src="5.jpg" alt="图5">
+            <div class="text">图5</div>
         </div>
         <div class="footer-text" onclick="nextPage(2)">按动此处翻页</div>
     </div>
@@ -137,25 +111,21 @@
     <!-- 第二页 -->
     <div id="page2" class="page">
         <div class="bold-text">箱根山岳险天下!</div>
-        <div class="image-row">
-            <div class="image-container">
-                <img src="6.jpg" alt="图6">
-                <div class="text">图6</div>
-            </div>
-            <div class="image-container">
-                <img src="7.jpg" alt="图7">
-                <div class="text">图7</div>
-            </div>
+        <div class="image-container">
+            <img src="6.jpg" alt="图6">
+            <div class="text">图6</div>
         </div>
-        <div class="image-row">
-            <div class="image-container">
-                <img src="8.jpg" alt="图8">
-                <div class="text">图8</div>
-            </div>
-            <div class="image-container">
-                <img src="9.jpg" alt="图9">
-                <div class="text">图9</div>
-            </div>
+        <div class="image-container">
+            <img src="7.jpg" alt="图7">
+            <div class="text">图7</div>
+        </div>
+        <div class="image-container">
+            <img src="8.jpg" alt="图8">
+            <div class="text">图8</div>
+        </div>
+        <div class="image-container">
+            <img src="9.jpg" alt="图9">
+            <div class="text">图9</div>
         </div>
         <div class="footer-text" onclick="nextPage(3)">按动此处翻页</div>
     </div>
@@ -164,13 +134,11 @@
     <div id="page3" class="page">
         <div class="bold-text">现实中的箱根驿传</div>
         <div class="image-row">
-            <div class="image-container image-left">
-                <img src="10.jpg" alt="图10">
-            </div>
-            <div class="image-container image-right">
-                <img src="11.jpg" alt="图11">
-                <img src="12.jpg" alt="图12">
-            </div>
+            <img src="10.jpg" alt="图10">
+        </div>
+        <div class="image-row">
+            <img src="11.jpg"alt="图11">
+            <img src="12.jpg" alt="图12">
         </div>
     </div>
 

@@ -61,9 +61,10 @@
             margin-top: 20px;
         }
 
-        .image-row {
+         .image-row {
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* 每行图片平均分布 */
+            width: 100%;
             margin-top: 20px;
         }
 
@@ -71,7 +72,21 @@
             width: 45%;
             margin: 10px;
         }
+        #page3 .image-row {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+        }
 
+        #page3 .image-left {
+            width: 48%; /* 左边图片占48% */
+            margin-right: 2%;
+        }
+
+        #page3 .image-right {
+            width: 48%; /* 右边图片占48% */
+            margin-left: 2%;
+        }
         .footer-text {
             cursor: pointer;
             font-size: 18px;
@@ -131,14 +146,16 @@
     </div>
 
     <!-- 第三页 -->
-    <div id="page3" class="page">
+     <div id="page3" class="page">
         <div class="bold-text">现实中的箱根驿传</div>
         <div class="image-row">
-            <img src="10.jpg" alt="图10">
-        </div>
-        <div class="image-row">
-            <img src="11.jpg"alt="图11">
-            <img src="12.jpg" alt="图12">
+            <div class="image-container image-left">
+                <img src="10.jpg" alt="图10">
+            </div>
+            <div class="image-container image-right">
+                <img src="11.jpg" alt="图11">
+                <img src="12.jpg" alt="图12">
+            </div>
         </div>
     </div>
 

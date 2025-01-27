@@ -25,7 +25,7 @@
             margin: 10px 0;
         }
 
-       #page2, #page4 .image-row {
+       .image-row {
            display: flex; /* 使用弹性布局，保证子元素横向排列 */
            justify-content: space-between; /* 让子元素（图片）之间的空隙相等 */
            align-items: center; /* 垂直居中对齐图片 */
@@ -33,31 +33,16 @@
            margin-top: 20px; /* 顶部间距 */
        }
 
-       #page2, #page4 .image-row .image-container {
+       .image-row .image-container {
            width: 33.33%; /* 每张图片占容器宽度的三分之一 */
            padding: 0 10px; /* 添加左右间距 */
        }
 
-       #page2, #page4 .image-row img {
+       .image-row img {
            width: 100%; /* 图片宽度填满各自容器 */
            height: auto; /* 保持图片的比例 */
        }
-       #page3 .image-row {
-           display: flex;
-           justify-content: space-between;  /* 使图片尽量占满整个画面 */
-           margin-top: 20px;
-           flex-wrap: wrap;  /* 防止换行 */
-       }
-
-       #page3 .image-container {
-           width: 32%; /* 每张图片占容器宽度的三分之一 */
-           margin: 5px;  /* 添加间距，防止图片挤在一起 */
-       }
-
-       #page3 .image-row img {
-           width: 100%;  /* 确保每张图片填满各自容器 */
-           height: auto;  /* 保持图片的比例 */
-       }
+     
 
         
         .text {
@@ -133,7 +118,7 @@
         
     <!-- 第三页 -->
     <div id="page3" class="page">
-        <div class="bold-text" onclick="nextPage(4)">箱根山岳险天下！</div>
+        <div class="bold-text">箱根山岳险天下！</div>
         <div class="image-row">
             <div class="image-container">
                 <img src="6.jpg" alt="图6">
@@ -143,15 +128,8 @@
             </div>
             <div class="image-container">
                 <img src="8.jpg" alt="图8">
-            <div class="image-container">
-                <img src="9.jpg" alt="图9">
             </div>
-            <div class="image-container">
-                <img src="13.jpg" alt="图13">
-            </div>
-            <div class="image-container">
-                <img src="14.jpg" alt="图14">
-            </div>
+        <div class="bold-text" onclick="nextPage(4)">点击翻页</div>
         </div>
     </div>
         

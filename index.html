@@ -31,7 +31,7 @@
 
         .image-container img {
             width: 100%;
-            max-width: 250px;
+            max-width: 100%;
             height: auto;
             cursor: pointer;
         }
@@ -67,32 +67,31 @@
 
         .image-row {
             display: flex;
-            justify-content: space-between; /* 两行每行两张图片 */
-            margin-top: 20px;
+            justify-content: space-between; /* 每行图片平均分布 */
             width: 100%;
+            margin-top: 20px;
         }
 
         .image-row img {
-            width: 45%; /* 每张图片占页面宽度的45% */
-            margin: 5px;
+            width: 48%; /* 每张图片占页面宽度的48% */
+            margin: 1%;
         }
 
         /* 第三页的图片排列 */
         #page3 .image-row {
             display: flex;
             justify-content: flex-start;
-        }
-
-        #page3 .image-row img {
-            margin: 5px;
+            width: 100%;
         }
 
         #page3 .image-left {
-            width: 45%; /* 左边图片占45% */
+            width: 48%; /* 左边图片占48% */
+            margin-right: 2%;
         }
 
         #page3 .image-right {
-            width: 45%; /* 右边图片占45% */
+            width: 48%; /* 右边图片占48% */
+            margin-left: 2%;
         }
 
         .footer-text {
@@ -197,5 +196,6 @@
 
 </body>
 </html>
+
 
 

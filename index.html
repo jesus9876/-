@@ -25,26 +25,23 @@
             margin: 10px 0;
         }
 
-        .image-container img {
-            width: 100%;  /* 图片占据80%宽度 */
-            height: auto;  /* 保持图片的比例 */
-            max-width: 100%;  /* 最大宽度为100%，避免超出页面 */
-            cursor: pointer;
-        }
-
        .image-row {
-            display: flex;
-            justify-content: space-between;  /* 使图片尽量占满整个画面 */
-            margin-top: 20px;
-            flex-wrap: nowrap; /* 防止换行 */
-            width: 100%;
-        }
+           display: flex; /* 使用弹性布局，保证子元素横向排列 */
+           justify-content: space-between; /* 让子元素（图片）之间的空隙相等 */
+           align-items: center; /* 垂直居中对齐图片 */
+           width: 100%; /* 使容器宽度占满屏幕 */
+           margin-top: 20px; /* 顶部间距 */
+       }
 
-        .image-row img {
-            width: 33%;  /* 每张图片宽度为33%，三张图片横向排列 */
-            height: auto;  /* 保持图片比例 */
-            margin: 0 10px;  /* 可选：图片之间的间距 */
-        }
+       .image-row .image-container {
+           width: 33.33%; /* 每张图片占容器宽度的三分之一 */
+           padding: 0 10px; /* 添加左右间距 */
+       }
+
+       .image-row img {
+           width: 100%; /* 图片宽度填满各自容器 */
+           height: auto; /* 保持图片的比例 */
+       }
 
         .text {
             color: black; /* 所有文字都设置为黑色 */

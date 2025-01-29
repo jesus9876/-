@@ -42,7 +42,20 @@
            width: 100%; /* 图片宽度填满各自容器 */
            height: auto; /* 保持图片的比例 */
        }
-     
+       .video-container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 70vh; /* 使视频区域居中 */
+       }
+
+       video {
+           width: 80%; /* 让视频宽度占 80% */
+           max-width: 800px; /* 限制最大宽度，防止过大 */
+           border-radius: 10px; /* 使视频边角圆润 */
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影美化 */
+       }
+
 
         
         .text {
@@ -81,7 +94,7 @@
             cursor: pointer;
             font-size: 18px;
             color: black;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         .large-text {
@@ -147,7 +160,20 @@
                 <img src="12.jpg" alt="图12">
             </div>
         </div>
+        <div class="footer-text" onclick="nextPage(4)">箱根驿传是日本著名的大学长跑接力赛，参赛队伍主要来自关东地区的大学，共21支。每队10名选手，每人跑约21公里，全程217.1公里，分两天进行。比赛路线涵盖城市街道、乡村小路和山路，极具挑战性。选手需在限定时间内完成赛段，否则会被取消资格。该赛事不仅考验选手的体能和技能，更传承着坚韧不拔、勇于挑战的精神。</div>
     </div>
+
+    <!-- 第五页 -->
+    <div id="page5" class="page">
+        <div class="bold-text">现实中的箱根驿传——视频展示</div>
+            <div class="video-container">
+                <video id="video" controls>
+                    <source src="video.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频标签。
+                </video>
+            </div>
+         </div>
+     </div>
 
     <!-- BGM -->
     <audio id="bgm" src="bgm.mp3" preload="auto"></audio>
